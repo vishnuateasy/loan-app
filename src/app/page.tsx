@@ -9,7 +9,7 @@ export default function Home() {
 
   const fetchItems = async () => {
     try {
-      const res = await fetch(`/api`);
+      const res = await fetch(`/api/users`);
       const data = await res.json();
       setItems(data);
     } catch (err) {
@@ -23,7 +23,7 @@ export default function Home() {
 
   const addItem = async () => {
     try {
-      await fetch("/api", {
+      await fetch("/api/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ mobile: newItem }),

@@ -13,25 +13,6 @@ export async function GET() {
   }
 }
 
-// export async function GET(
-//   req: Request,
-//   { params }: { params: { id: string } }
-// ) {
-//   const { id } = params;
-
-//   const user = await prisma.user.findUnique({
-//     where: {
-//       id: id, // Fetch the user based on the provided id
-//     },
-//   });
-
-//   if (!user) {
-//     return NextResponse.json({ message: "User not found" }, { status: 404 });
-//   }
-
-//   return NextResponse.json(user);
-// }
-
 export async function POST(req: Request) {
   try {
     const data = await req.json();
