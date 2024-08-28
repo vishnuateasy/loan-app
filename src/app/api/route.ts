@@ -4,8 +4,13 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export async function GET() {
-  const items = await prisma.user.findMany();
-  return NextResponse.json(items);
+  try {
+    const items = await prisma.user.findMany();
+    return NextResponse.json(items);
+  } catch (err) {
+    console.log(err);
+    return NextResponse.json(err);
+  }
 }
 
 // export async function GET(
@@ -28,21 +33,26 @@ export async function GET() {
 // }
 
 export async function POST(req: Request) {
-  const data = await req.json();
-  let user;
-  const existingUser = await prisma.user.findUnique({
-    where: {
-      mobile: data.mobile, // or mobile: data.mobile if you prefer
-    },
-  });
-  if (existingUser) {
-    user = existingUser;
-  } else {
-    user = await prisma.user.create({
-      data: { ...data, step: 1 },
+  try {
+    const data = await req.json();
+    let user;
+    const existingUser = await prisma.user.findUnique({
+      where: {
+        mobile: data.mobile, // or mobile: data.mobile if you prefer
+      },
     });
+    if (existingUser) {
+      user = existingUser;
+    } else {
+      user = await prisma.user.create({
+        data: { ...data, step: 1 },
+      });
+    }
+    return NextResponse.json(user);
+  } catch (err) {
+    console.log(err);
+    return NextResponse.json(err);
   }
-  return NextResponse.json(user);
 }
 
 export async function PUT(req: Request) {

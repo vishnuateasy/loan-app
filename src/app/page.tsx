@@ -8,9 +8,13 @@ export default function Home() {
   const [editItem, setEditItem] = useState({ id: null, mobile: "" });
 
   const fetchItems = async () => {
-    const res = await fetch(`/api`);
-    const data = await res.json();
-    setItems(data);
+    try {
+      const res = await fetch(`/api`);
+      const data = await res.json();
+      setItems(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
@@ -18,14 +22,18 @@ export default function Home() {
   }, []);
 
   const addItem = async () => {
-    await fetch("/api", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ mobile: newItem }),
-    });
-    localStorage.setItem("mobile", JSON.stringify(newItem));
-    setNewItem("");
-    fetchItems();
+    try {
+      await fetch("/api", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mobile: newItem }),
+      });
+      localStorage.setItem("mobile", JSON.stringify(newItem));
+      setNewItem("");
+      fetchItems();
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const updateItem = async () => {
