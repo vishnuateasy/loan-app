@@ -6,7 +6,6 @@ export async function GET() {
   try {
     await dbConnect();
     const users = await User.find({});
-    // const users = await prisma.user.findMany();
     return NextResponse.json(users);
   } catch (err) {
     console.log(err);
@@ -18,16 +17,9 @@ export async function POST(req: Request) {
   try {
     await dbConnect();
     const data = await req.json();
-    console.log(data, "data");
-    let user;
-    const existingUser = await User.findOne({
-      where: {
-        mobile: data.mobile,
-      },
-    });
-    if (existingUser) {
-      user = existingUser;
-    } else {
+
+    let user = await User.findOne(data);
+    if (!user) {
       user = await User.create({ ...data, step: 1 });
     }
     return NextResponse.json(user);
