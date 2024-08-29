@@ -8,7 +8,7 @@ export default function Home() {
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [editItem, setEditItem] = useState({ id: null, mobile: "" });
-  const [showStepper, setShowStepper] = useState(false); 
+  const [showStepper, setShowStepper] = useState(false);
 
   const addItem = async () => {
     try {
@@ -19,7 +19,7 @@ export default function Home() {
       });
       localStorage.setItem("mobile", JSON.stringify(newItem));
       setNewItem("");
-      setShowStepper(true); 
+      setShowStepper(true);
     } catch (err) {
       console.log(err);
     }
@@ -43,17 +43,12 @@ export default function Home() {
   };
 
   return (
-       <div>
+    <div>
       {showStepper ? (
-        <HorizontalNonLinearStepper /> 
+        <HorizontalNonLinearStepper />
       ) : (
-        <Main
-          newItem={newItem}
-          setNewItem={setNewItem}
-          addItem={addItem}
-        />
+        <Main newItem={newItem} setNewItem={setNewItem} addItem={addItem} />
       )}
     </div>
-
   );
 }
