@@ -1,25 +1,10 @@
 "use client";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Home() {
   const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState("");
   const [editItem, setEditItem] = useState({ id: null, mobile: "" });
-
-  const fetchItems = async () => {
-    try {
-      const res = await fetch(`/api/users`);
-      const data = await res.json();
-      setItems(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchItems();
-  }, []);
 
   const addItem = async () => {
     try {
@@ -30,7 +15,6 @@ export default function Home() {
       });
       localStorage.setItem("mobile", JSON.stringify(newItem));
       setNewItem("");
-      fetchItems();
     } catch (err) {
       console.log(err);
     }
@@ -43,7 +27,6 @@ export default function Home() {
       body: JSON.stringify(editItem),
     });
     setEditItem({ id: null, mobile: "" });
-    fetchItems();
   };
 
   const deleteItem = async (id: number) => {
@@ -52,7 +35,6 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id }),
     });
-    fetchItems();
   };
 
   return (
