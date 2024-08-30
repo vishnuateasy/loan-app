@@ -20,7 +20,7 @@ const Main: React.FC<MainProps> = ({ newItem, setNewItem, addItem }) => {
         </div>
 
         {/* Features List */}
-        <ul className="space-y-2 text-gray-700 pl-4 lg:mr-36 mb-10">
+        <ul className="space-y-2 text-gray-700 pl-4 mr-28 lg:mr-32 mb-10">
           <li>✓ Best Offers from 10+ Lenders</li>
           <li>✓ Hassle-Free Documentation</li>
           <li>✓ Quick Disbursal</li>

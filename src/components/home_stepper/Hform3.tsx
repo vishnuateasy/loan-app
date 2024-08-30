@@ -10,10 +10,10 @@ interface Hform3Props {
   }
 const Hform3: React.FC<Hform3Props> = ({ onContinue, onBack }) => {
     const radioOptions = [
-        { value: "option-one", label: "Within 30 Days", color: "text-blue" },
-        { value: "option-two", label: "31 - 90 Days", color: "text-blue" },
-        { value: "option-three", label: "91 - 180 Days", color: "text-blue" },
-        { value: "option-four", label: "180+ Days", color: "text-blue" },
+        { value: "option-one", label: "Within 30 Days"},
+        { value: "option-two", label: "31 - 90 Days"},
+        { value: "option-three", label: "91 - 180 Days"},
+        { value: "option-four", label: "180+ Days"},
       ];
       return (
         <div className="flex flex-col lg:flex-row min-h-screen">
@@ -42,7 +42,7 @@ const Hform3: React.FC<Hform3Props> = ({ onContinue, onBack }) => {
                       key={option.value}
                       className="flex items-center justify-between space-x-2 border p-4 rounded-lg"
                     >
-                      <Label htmlFor={option.value} className={option.color}>
+                      <Label htmlFor={option.value} className="text-blue">
                         {option.label}
                       </Label>
                       <RadioGroupItem value={option.value} id={option.value} />

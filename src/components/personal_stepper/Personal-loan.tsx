@@ -1,9 +1,10 @@
 'use client'
 import { useState } from "react";
-import HomeLeft from "./home-left";
-import HomeStepper from "./home-stepper";
+import PersonalStepper from "./personal-stepper";
+import PersonalLeft from "./personal-left";
 
-const HomeLoanMain = () => {
+
+const PersonalLoanMain = () => {
   const [showStepper, setShowStepper] = useState(false);
 
   const handleProceedClick = () => {
@@ -14,23 +15,24 @@ const HomeLoanMain = () => {
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Conditionally render components based on showStepper state */}
       {showStepper ? (
-        <HomeStepper />
+        <PersonalStepper />
       ) : (
         <>
-          <HomeLeft />
+          <PersonalLeft />
           <div className="w-full lg:w-7/12 bg-white flex flex-col  justify-center items-center lg:p-12">
             <div className="flex flex-col items-center">
               <h3 className="text-lg lg:text-xl max-w-xs mb-6 mr-16 lg:max-w-sm text-blue font-semibold">
-                Unlock Best <span className="font-bold">Home Loan</span> Offers
-                <br /> from 20+ Lenders
+                Unlock Best <span className="font-bold">Personal Loan</span> Offers
+                <br /> from 30+ Lenders
               </h3>
             </div>
 
             {/* Features List */}
             <ul className="space-y-2 text-gray-700 pl-4 mr-24 lg:mr-32 mb-10">
-              <li>✓ Compare Offers from Top Banks</li>
-              <li>✓ Best Interest Rate</li>
-              <li>✓ Loan Tenure up to 30 Years</li>
+              <li>✓ Hand-picked offers from 30+ lenders</li>
+              <li>✓ Money in mins via Pre-Approved loans</li>
+              <li>✓ Instant sanction and disbursal</li>
+              <li>✓ Contact-less processes</li>
             </ul>
 
             {/* Input Section */}
@@ -69,4 +71,4 @@ const HomeLoanMain = () => {
   );
 };
 
-export default HomeLoanMain;
+export default PersonalLoanMain;

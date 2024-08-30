@@ -10,11 +10,11 @@ interface Form2Props {
 }
 const Form2: React.FC<Form2Props> = ({ onContinue, onBack }) => {
   const radioOptions = [
-    { value: "option-one", label: "Below ₹2 Lacs", color: "text-blue" },
-    { value: "option-two", label: "₹2 - ₹5 Lacs", color: "text-blue" },
-    { value: "option-three", label: "₹5 - ₹10 Lacs", color: "text-blue" },
-    { value: "option-four", label: "₹10 - ₹20 Lacs", color: "text-blue" },
-    { value: "option-five", label: "Above ₹20 Lacs", color: "text-blue" },
+    { value: "option-one", label: "Below ₹2 Lacs"},
+    { value: "option-two", label: "₹2 - ₹5 Lacs"},
+    { value: "option-three", label: "₹5 - ₹10 Lacs"},
+    { value: "option-four", label: "₹10 - ₹20 Lacs"},
+    { value: "option-five", label: "Above ₹20 Lacs"},
   ];
 
   return (
@@ -43,7 +43,7 @@ const Form2: React.FC<Form2Props> = ({ onContinue, onBack }) => {
                   key={option.value}
                   className="flex items-center justify-between w-full lg:w-3/5 space-x-2 border p-4 rounded-lg"
                 >
-                  <Label htmlFor={option.value} className={option.color}>
+                  <Label htmlFor={option.value} className="text-blue">
                     {option.label}
                   </Label>
                   <RadioGroupItem value={option.value} id={option.value} />

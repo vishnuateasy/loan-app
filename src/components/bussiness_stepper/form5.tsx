@@ -26,11 +26,11 @@ const Form5: React.FC<Form5Props> = ({ onBack }) =>{
   };
   
   const radioOptions = [
-    { value: "option-one", label: "Under 1 years", color: "text-blue" },
-    { value: "option-two", label: "1 - 2 years", color: "text-blue" },
-    { value: "option-three", label: "2 - 3 years", color: "text-blue" },
-    { value: "option-four", label: "3 - 5 years", color: "text-blue" },
-    { value: "option-five", label: "Over 5 years", color: "text-blue" },
+    { value: "option-one", label: "Under 1 years" },
+    { value: "option-two", label: "1 - 2 years"},
+    { value: "option-three", label: "2 - 3 years"},
+    { value: "option-four", label: "3 - 5 years"},
+    { value: "option-five", label: "Over 5 years"},
   ];
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
@@ -58,7 +58,7 @@ const Form5: React.FC<Form5Props> = ({ onBack }) =>{
                 key={option.value}
                 className="flex items-center justify-between w-full lg:w-3/5 space-x-2 border p-4 rounded-lg"
               >
-                <Label htmlFor={option.value} className={option.color}>
+                <Label htmlFor={option.value} className="text-blue">
                   {option.label}
                 </Label>
                 <RadioGroupItem value={option.value} id={option.value} />

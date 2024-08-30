@@ -9,12 +9,12 @@ interface Hform1Props {
   }
 const Hform1: React.FC<Hform1Props> = ({ onContinue }) => {
     const radioOptions = [
-        { value: "option-one", label: "Upto ₹15 Lacs", color: "text-blue" },
-        { value: "option-two", label: "₹15 - ₹20 Lacs", color: "text-blue" },
-        { value: "option-three", label: "₹20 - ₹30 Lacs", color: "text-blue" },
-        { value: "option-four", label: "₹30 - ₹50 Lacs", color: "text-blue" },
-        { value: "option-five", label: "₹50 - ₹75 Lacs", color: "text-blue" },
-        { value: "option-six", label: "₹75 Lacs +", color: "text-blue" },
+        { value: "option-one", label: "Upto ₹15 Lacs"},
+        { value: "option-two", label: "₹15 - ₹20 Lacs"},
+        { value: "option-three", label: "₹20 - ₹30 Lacs" },
+        { value: "option-four", label: "₹30 - ₹50 Lacs" },
+        { value: "option-five", label: "₹50 - ₹75 Lacs",},
+        { value: "option-six", label: "₹75 Lacs +" },
       ];
     return(
 <div className="flex flex-col lg:flex-row min-h-screen">
@@ -37,7 +37,7 @@ const Hform1: React.FC<Hform1Props> = ({ onContinue }) => {
                   key={option.value}
                   className="flex items-center justify-between space-x-2 border p-4 rounded-lg"
                 >
-                  <Label htmlFor={option.value} className={option.color}>
+                  <Label htmlFor={option.value} className="text-blue">
                     {option.label}
                   </Label>
                   <RadioGroupItem value={option.value} id={option.value} />

@@ -16,7 +16,7 @@ const HomeLeft = () => {
         <img
           src="https://www.paisabazaar.com/home-loans/_next/static/media/hlMainImg.4f0d448c.svg"
           alt="Business Illustration"
-          className="w-full h-auto max-w-xs"
+          className="w-full  h-auto max-w-xs"
         />
       </div>
     </div>

@@ -1,39 +1,50 @@
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "../ui/button";
-import HomeLeft from "./home-left";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
+import PersonalLeft from "./personal-left";
+import { useState } from "react";
+import VerifyMobileDialog from "../bussiness_stepper/dialog";
 
-interface Hform2Props {
-  onContinue: () => void;
+interface Pform5Props {
   onBack: () => void;
 }
-const Hform2: React.FC<Hform2Props> = ({ onContinue, onBack }) => {
+const Pform5: React.FC<Pform5Props> = ({ onBack }) => {
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
   const radioOptions = [
     { value: "option-one", label: "Jaipur" },
-    { value: "option-two", label: "Mumbai"},
-    { value: "option-three", label: "Pune"},
-    { value: "option-four", label: "Chennai"},
-    { value: "option-five", label: "Bengaluru"},
-    { value: "option-six", label: "Delhi"},
+    { value: "option-two", label: "Mumbai" },
+    { value: "option-three", label: "Pune" },
+    { value: "option-four", label: "Chennai" },
+    { value: "option-five", label: "Bengaluru" },
+    { value: "option-six", label: "Delhi" },
+    { value: "option-seven", label: "Kolkata" },
+    { value: "option-eight", label: "Goa" },
   ];
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Section */}
-      <HomeLeft />
+      <PersonalLeft />
 
       {/* Right Section */}
       <div className="w-full lg:w-7/12 bg-white flex flex-col p-8 lg:p-16 lg:mx-20">
         <div className="flex flex-col items-start mb-8">
-        <Button
+          <Button
             className="bg-gray-300 hover:bg-slate-300 mb-2 w-8 h-8 p-3"
             onClick={onBack}
           >
             <ArrowBackIosNewRoundedIcon />
           </Button>
           <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue font-semibold">
-          Where are you looking to
-          buy your property?
+            Select your Residence City
           </h3>
         </div>
         <div>
@@ -55,12 +66,14 @@ const Hform2: React.FC<Hform2Props> = ({ onContinue, onBack }) => {
         </div>
         <Button
           className="bg-blue-700 mt-10 lg:mt-16 w-full lg:w-3/5 hover:bg-blue-700"
-          onClick={onContinue}
+          onClick={handleClickOpen}
         >
           Continue
         </Button>
+        <VerifyMobileDialog open={open} onClose={handleClose} />
+
       </div>
     </div>
   );
 };
-export default Hform2;
+export default Pform5;

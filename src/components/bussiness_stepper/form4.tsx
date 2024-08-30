@@ -11,14 +11,14 @@ interface Form4Props {
 }
 const Form4: React.FC<Form4Props> = ({ onContinue, onBack }) => {
   const radioOptions = [
-    { value: "option-one", label: "Jaipur", color: "text-blue" },
-    { value: "option-two", label: "Mumbai", color: "text-blue" },
-    { value: "option-three", label: "Pune", color: "text-blue" },
-    { value: "option-four", label: "Chennai", color: "text-blue" },
-    { value: "option-five", label: "Bengaluru", color: "text-blue" },
-    { value: "option-six", label: "Kolkota", color: "text-blue" },
-    { value: "option-seven", label: "Kota", color: "text-blue" },
-    { value: "option-eight", label: "Delhi", color: "text-blue" },
+    { value: "option-one", label: "Jaipur"},
+    { value: "option-two", label: "Mumbai"},
+    { value: "option-three", label: "Pune"},
+    { value: "option-four", label: "Chennai"},
+    { value: "option-five", label: "Bengaluru"},
+    { value: "option-six", label: "Kolkota"},
+    { value: "option-seven", label: "Kota"},
+    { value: "option-eight", label: "Delhi"},
   ];
 
   return (
@@ -47,7 +47,7 @@ const Form4: React.FC<Form4Props> = ({ onContinue, onBack }) => {
                   key={option.value}
                   className="flex items-center justify-between space-x-2 border p-4 rounded-lg"
                 >
-                  <Label htmlFor={option.value} className={option.color}>
+                  <Label htmlFor={option.value} className="text-blue">
                     {option.label}
                   </Label>
                   <RadioGroupItem value={option.value} id={option.value} />
