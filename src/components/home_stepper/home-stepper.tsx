@@ -1,14 +1,15 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Form1 from "./form1";
-import Form2 from "./form2";
-import Form3 from "./form3";
-import Form4 from "./form4";
-import Form5 from "./form5";
+import Hform1 from "./Hform1";
+import Hform2 from "./Hform2";
+import Hform3 from "./Hform3";
+import Hform4 from "./Hform4";
+import Hform5 from "./Hform5";
+import Hform6 from "./Hform6";
 
-export default function HorizontalNonLinearStepper() {
+
+export default function HomeStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -26,15 +27,17 @@ export default function HorizontalNonLinearStepper() {
   const renderForm = () => {
     switch (activeStep) {
       case 0:
-        return <Form1 onContinue={handleNext} />;
+        return <Hform1 onContinue={handleNext} />;
       case 1:
-        return <Form2 onContinue={handleNext} onBack={handleBack} />;
+        return <Hform2 onContinue={handleNext} onBack={handleBack} />;
       case 2:
-        return <Form3 onContinue={handleNext} onBack={handleBack} />;
+        return <Hform3 onContinue={handleNext} onBack={handleBack} />;
       case 3:
-        return <Form4 onContinue={handleNext} onBack={handleBack} />;
+        return <Hform4 onContinue={handleNext} onBack={handleBack} />;
       case 4:
-        return <Form5 onBack={handleBack} />;
+        return <Hform5 onContinue={handleNext} onBack={handleBack} />;
+      case 5:
+        return <Hform6 onBack={handleBack} />;
       default:
         return <Typography>Unknown step</Typography>;
     }
@@ -45,14 +48,6 @@ export default function HorizontalNonLinearStepper() {
       <div>
         {renderForm()}
         <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-          <Button
-            color="inherit"
-            disabled={activeStep === 0}
-            onClick={handleBack}
-            sx={{ mr: 1 }}
-          >
-            Back
-          </Button>
         </Box>
       </div>
     </Box>

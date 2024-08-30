@@ -1,3 +1,5 @@
+import MainLeft from "./mainLeft";
+
 /* eslint-disable @next/next/no-img-element */
 interface MainProps {
   newItem: string;
@@ -5,47 +7,20 @@ interface MainProps {
   addItem: () => void;
 }
 const Main: React.FC<MainProps> = ({ newItem, setNewItem, addItem }) => {
- 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Section */}
-      <div className=" w-5/12 bg-blue-100 flex  flex-col justify-center p-12">
-        <div className="relative mb-28 ml-12">
-          <h2 className=" text-2xl font-bold text-gray-900 mb-6">
-            Business Loan
-          </h2>
-          <p className=" text-sm text-gray-700 mb-8">
-            Every business needs capital to grow and at Paisabazaar, we ensure
-            you get the best of what you need. Whether you are launching or
-            expanding your business, we pledge to give you the best business
-            loan offers.
-          </p>
-        </div>
-        <div className="flex justify-center items-center">
-          <img
-            src="https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg"
-            alt="Business Illustration"
-            className="w-full h-auto max-w-xs"
-          />
-        </div>
-      </div>
-
-      <div className="w-7/12 bg-white flex flex-col justify-center items-center  lg:p-12 ">
-        <div className="flex flex-col  items-center  ">
-          <img
-            src="https://storage.googleapis.com/devitary-image-host.appspot.com/15846435184459982716-LogoMakr_7POjrN.png"
-            className="w-16 mb-4 lg:w-24 "
-            alt="Logo"
-          />
-
-          <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue-800 font-semibold">
+      <MainLeft />
+      <div className="w-full lg:w-7/12 bg-white flex flex-col justify-center items-center lg:p-12">
+        <div className="flex flex-col items-center">
+          <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue font-semibold">
             Unlock Best <span className="font-bold">Business Loan</span> Offers
             <br /> for meeting your Capital requirements
           </h3>
         </div>
 
         {/* Features List */}
-        <ul className="space-y-2 text-gray-700 pl-4 mr-36 mb-10">
+        <ul className="space-y-2 text-gray-700 pl-4 lg:mr-36 mb-10">
           <li>✓ Best Offers from 10+ Lenders</li>
           <li>✓ Hassle-Free Documentation</li>
           <li>✓ Quick Disbursal</li>

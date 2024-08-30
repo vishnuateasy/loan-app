@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import Main from "@/components/main/main";
-import HorizontalNonLinearStepper from "@/components/stepper/stepper";
+import HorizontalNonLinearStepper from "@/components/bussiness_stepper/stepper";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -43,17 +43,17 @@ export default function Home() {
   };
 
   return (
-    <div>
-    {showStepper ? (
-      <HorizontalNonLinearStepper /> 
-    ) : (
-      <Main
-        newItem={newItem}
-        setNewItem={setNewItem}
-        addItem={addItem}
-      />
-    )}
-  </div>
+       <div>
+      {showStepper ? (
+        <HorizontalNonLinearStepper /> 
+      ) : (
+        <Main
+          newItem={newItem}
+          setNewItem={setNewItem}
+          addItem={addItem}
+        />
+      )}
+    </div>
 
   );
 }
