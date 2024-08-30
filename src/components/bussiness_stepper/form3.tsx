@@ -11,13 +11,13 @@ interface Form3Props {
 }
 const Form3: React.FC<Form3Props> = ({ onContinue, onBack }) => {
   const radioOptions = [
-    { value: "option-one", label: "Below  ₹5 Lacs"},
-    { value: "option-two", label: "₹5 - ₹10 Lacs"},
-    { value: "option-three", label: "₹10 - ₹25 Lacs"},
-    { value: "option-four", label: "₹25 - ₹50 Lacs"},
-    { value: "option-five", label: "₹50 - ₹75 Lacs"},
-    { value: "option-six", label: "₹75 Lacs - ₹1 Cr"},
-    { value: "option-seven", label: "Over ₹1 Cr"},
+    { value: "option-one", label: "Below  ₹5 Lacs" },
+    { value: "option-two", label: "₹5 - ₹10 Lacs" },
+    { value: "option-three", label: "₹10 - ₹25 Lacs" },
+    { value: "option-four", label: "₹25 - ₹50 Lacs" },
+    { value: "option-five", label: "₹50 - ₹75 Lacs" },
+    { value: "option-six", label: "₹75 Lacs - ₹1 Cr" },
+    { value: "option-seven", label: "Over ₹1 Cr" },
   ];
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">

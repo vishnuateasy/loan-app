@@ -3,21 +3,20 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "../ui/button";
 import HomeLeft from "./home-left";
 
-
 interface Hform1Props {
-    onContinue: () => void;
-  }
+  onContinue: () => void;
+}
 const Hform1: React.FC<Hform1Props> = ({ onContinue }) => {
-    const radioOptions = [
-        { value: "option-one", label: "Upto ₹15 Lacs"},
-        { value: "option-two", label: "₹15 - ₹20 Lacs"},
-        { value: "option-three", label: "₹20 - ₹30 Lacs" },
-        { value: "option-four", label: "₹30 - ₹50 Lacs" },
-        { value: "option-five", label: "₹50 - ₹75 Lacs",},
-        { value: "option-six", label: "₹75 Lacs +" },
-      ];
-    return(
-<div className="flex flex-col lg:flex-row min-h-screen">
+  const radioOptions = [
+    { value: "option-one", label: "Upto ₹15 Lacs" },
+    { value: "option-two", label: "₹15 - ₹20 Lacs" },
+    { value: "option-three", label: "₹20 - ₹30 Lacs" },
+    { value: "option-four", label: "₹30 - ₹50 Lacs" },
+    { value: "option-five", label: "₹50 - ₹75 Lacs" },
+    { value: "option-six", label: "₹75 Lacs +" },
+  ];
+  return (
+    <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Section */}
       <HomeLeft />
 
@@ -25,8 +24,7 @@ const Hform1: React.FC<Hform1Props> = ({ onContinue }) => {
       <div className="w-full lg:w-7/12 bg-white flex flex-col p-8 lg:p-16 lg:mx-20">
         <div className="flex flex-col items-start mb-8">
           <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue font-semibold">
-          Select your desired
-          Home Loan Amount
+            Select your desired Home Loan Amount
           </h3>
         </div>
         <div>
@@ -45,7 +43,11 @@ const Hform1: React.FC<Hform1Props> = ({ onContinue }) => {
               ))}
             </div>
           </RadioGroup>
-        <p className=" text-sm mt-5"> I authorize Paisabazaar to share details of home loan enquiry with HDFC, HFFC & IndiaBulls</p>
+          <p className=" text-sm mt-5">
+            {" "}
+            I authorize Paisabazaar to share details of home loan enquiry with
+            HDFC, HFFC & IndiaBulls
+          </p>
         </div>
         <Button
           className="bg-blue-700 mt-10 lg:mt-16 w-full lg:w-3/5 hover:bg-blue-700"
@@ -55,5 +57,6 @@ const Hform1: React.FC<Hform1Props> = ({ onContinue }) => {
         </Button>
       </div>
     </div>
-    )}
-export default Hform1
+  );
+};
+export default Hform1;

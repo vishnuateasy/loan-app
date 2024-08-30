@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import HomeLeft from "./home-left";
 import HomeStepper from "./home-stepper";

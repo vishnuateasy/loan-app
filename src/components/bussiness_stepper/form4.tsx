@@ -11,14 +11,14 @@ interface Form4Props {
 }
 const Form4: React.FC<Form4Props> = ({ onContinue, onBack }) => {
   const radioOptions = [
-    { value: "option-one", label: "Jaipur"},
-    { value: "option-two", label: "Mumbai"},
-    { value: "option-three", label: "Pune"},
-    { value: "option-four", label: "Chennai"},
-    { value: "option-five", label: "Bengaluru"},
-    { value: "option-six", label: "Kolkota"},
-    { value: "option-seven", label: "Kota"},
-    { value: "option-eight", label: "Delhi"},
+    { value: "option-one", label: "Jaipur" },
+    { value: "option-two", label: "Mumbai" },
+    { value: "option-three", label: "Pune" },
+    { value: "option-four", label: "Chennai" },
+    { value: "option-five", label: "Bengaluru" },
+    { value: "option-six", label: "Kolkota" },
+    { value: "option-seven", label: "Kota" },
+    { value: "option-eight", label: "Delhi" },
   ];
 
   return (

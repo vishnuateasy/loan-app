@@ -11,11 +11,11 @@ interface Hform2Props {
 const Hform2: React.FC<Hform2Props> = ({ onContinue, onBack }) => {
   const radioOptions = [
     { value: "option-one", label: "Jaipur" },
-    { value: "option-two", label: "Mumbai"},
-    { value: "option-three", label: "Pune"},
-    { value: "option-four", label: "Chennai"},
-    { value: "option-five", label: "Bengaluru"},
-    { value: "option-six", label: "Delhi"},
+    { value: "option-two", label: "Mumbai" },
+    { value: "option-three", label: "Pune" },
+    { value: "option-four", label: "Chennai" },
+    { value: "option-five", label: "Bengaluru" },
+    { value: "option-six", label: "Delhi" },
   ];
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
@@ -25,15 +25,14 @@ const Hform2: React.FC<Hform2Props> = ({ onContinue, onBack }) => {
       {/* Right Section */}
       <div className="w-full lg:w-7/12 bg-white flex flex-col p-8 lg:p-16 lg:mx-20">
         <div className="flex flex-col items-start mb-8">
-        <Button
+          <Button
             className="bg-gray-300 hover:bg-slate-300 mb-2 w-8 h-8 p-3"
             onClick={onBack}
           >
             <ArrowBackIosNewRoundedIcon />
           </Button>
           <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue font-semibold">
-          Where are you looking to
-          buy your property?
+            Where are you looking to buy your property?
           </h3>
         </div>
         <div>

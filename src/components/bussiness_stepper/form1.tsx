@@ -38,7 +38,7 @@ const Form1: React.FC<Form1Props> = ({ onContinue }) => {
                       Engage in a profession (Eg: Doctor, C.A., Lawyer, etc)
                     </p>
                   </Label>
-                  <RadioGroupItem  value="option-two" id="option-two" />
+                  <RadioGroupItem value="option-two" id="option-two" />
                 </div>
               </div>
             </RadioGroup>
