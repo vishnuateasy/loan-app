@@ -72,8 +72,12 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      textColor: {
+        'blue': 'hsl(210, 100%, 30%)'  
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
 export default config;
