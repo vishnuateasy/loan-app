@@ -1,32 +1,42 @@
-/* eslint-disable @next/next/no-img-element */
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "../ui/button";
 import ArrowBackIosNewRoundedIcon from "@mui/icons-material/ArrowBackIosNewRounded";
-import MainLeft from "../main/mainLeft";
+import PersonalLeft from "./personal-left";
+import { useState } from "react";
+import VerifyMobileDialog from "../bussiness_stepper/dialog";
 
-interface Form3Props {
-  onContinue: () => void;
+interface Pform5Props {
   onBack: () => void;
 }
-const Form3: React.FC<Form3Props> = ({ onContinue, onBack }) => {
+const Pform5: React.FC<Pform5Props> = ({ onBack }) => {
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
   const radioOptions = [
-    { value: "option-one", label: "Below  ₹5 Lacs"},
-    { value: "option-two", label: "₹5 - ₹10 Lacs"},
-    { value: "option-three", label: "₹10 - ₹25 Lacs"},
-    { value: "option-four", label: "₹25 - ₹50 Lacs"},
-    { value: "option-five", label: "₹50 - ₹75 Lacs"},
-    { value: "option-six", label: "₹75 Lacs - ₹1 Cr"},
-    { value: "option-seven", label: "Over ₹1 Cr"},
+    { value: "option-one", label: "Jaipur" },
+    { value: "option-two", label: "Mumbai" },
+    { value: "option-three", label: "Pune" },
+    { value: "option-four", label: "Chennai" },
+    { value: "option-five", label: "Bengaluru" },
+    { value: "option-six", label: "Delhi" },
+    { value: "option-seven", label: "Kolkata" },
+    { value: "option-eight", label: "Goa" },
   ];
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Section */}
-      <MainLeft />
+      <PersonalLeft />
 
       {/* Right Section */}
       <div className="w-full lg:w-7/12 bg-white flex flex-col p-8 lg:p-16 lg:mx-20">
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start mb-8">
           <Button
             className="bg-gray-300 hover:bg-slate-300 mb-2 w-4 h-4 p-3"
             onClick={onBack}
@@ -34,16 +44,16 @@ const Form3: React.FC<Form3Props> = ({ onContinue, onBack }) => {
             <ArrowBackIosNewRoundedIcon />
           </Button>
           <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue font-semibold">
-            Gross Annual Turnover?
+            Select your Residence City
           </h3>
         </div>
         <div>
           <RadioGroup defaultValue="option-one">
-            <div className="flex flex-col space-y-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {radioOptions.map((option) => (
                 <div
                   key={option.value}
-                  className="flex items-center justify-between w-full lg:w-4/6 space-x-2 border p-3 rounded-lg"
+                  className="flex items-center justify-between space-x-2 border p-4 rounded-lg"
                 >
                   <Label htmlFor={option.value} className="text-blue">
                     {option.label}
@@ -56,12 +66,14 @@ const Form3: React.FC<Form3Props> = ({ onContinue, onBack }) => {
         </div>
         <Button
           className="bg-blue-700 mt-10 lg:mt-16 w-full lg:w-3/5 hover:bg-blue-700"
-          onClick={onContinue}
+          onClick={handleClickOpen}
         >
           Continue
         </Button>
+        <VerifyMobileDialog open={open} onClose={handleClose} />
+
       </div>
     </div>
   );
 };
-export default Form3;
+export default Pform5;

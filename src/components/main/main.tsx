@@ -11,7 +11,7 @@ const Main: React.FC<MainProps> = ({ newItem, setNewItem, addItem }) => {
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Section */}
       <MainLeft />
-      <div className="w-full lg:w-7/12 bg-white flex flex-col justify-center items-center lg:p-12">
+      <div className="w-full lg:w-7/12 bg-white flex my-5 flex-col justify-center items-center lg:p-12">
         <div className="flex flex-col items-center">
           <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue font-semibold">
             Unlock Best <span className="font-bold">Business Loan</span> Offers
@@ -20,7 +20,7 @@ const Main: React.FC<MainProps> = ({ newItem, setNewItem, addItem }) => {
         </div>
 
         {/* Features List */}
-        <ul className="space-y-2 text-gray-700 pl-4 lg:mr-36 mb-10">
+        <ul className="space-y-2 text-gray-700 pl-4 mr-28 lg:mr-32 mb-10">
           <li>✓ Best Offers from 10+ Lenders</li>
           <li>✓ Hassle-Free Documentation</li>
           <li>✓ Quick Disbursal</li>

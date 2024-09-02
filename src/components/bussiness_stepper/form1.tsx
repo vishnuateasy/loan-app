@@ -31,14 +31,14 @@ const Form1: React.FC<Form1Props> = ({ onContinue }) => {
                   </Label>
                   <RadioGroupItem value="option-one" id="option-one" />
                 </div>
-                <div className="flex items-center justify-between space-x-2 border p-5 rounded-lg">
+                <div className="flex items-center justify-between space-x-2 border p-4 lg:p-5 rounded-lg">
                   <Label htmlFor="option-two" className="text-blue">
                     Self-Employed Professional
                     <p className="text-gray-500 mt-2">
                       Engage in a profession (Eg: Doctor, C.A., Lawyer, etc)
                     </p>
                   </Label>
-                  <RadioGroupItem value="option-two" id="option-two" />
+                  <RadioGroupItem  value="option-two" id="option-two" />
                 </div>
               </div>
             </RadioGroup>

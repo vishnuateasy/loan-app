@@ -10,11 +10,11 @@ interface Form2Props {
 }
 const Form2: React.FC<Form2Props> = ({ onContinue, onBack }) => {
   const radioOptions = [
-    { value: "option-one", label: "Below ₹2 Lacs", color: "text-blue" },
-    { value: "option-two", label: "₹2 - ₹5 Lacs", color: "text-blue" },
-    { value: "option-three", label: "₹5 - ₹10 Lacs", color: "text-blue" },
-    { value: "option-four", label: "₹10 - ₹20 Lacs", color: "text-blue" },
-    { value: "option-five", label: "Above ₹20 Lacs", color: "text-blue" },
+    { value: "option-one", label: "Below ₹2 Lacs"},
+    { value: "option-two", label: "₹2 - ₹5 Lacs"},
+    { value: "option-three", label: "₹5 - ₹10 Lacs"},
+    { value: "option-four", label: "₹10 - ₹20 Lacs"},
+    { value: "option-five", label: "Above ₹20 Lacs"},
   ];
 
   return (
@@ -26,7 +26,7 @@ const Form2: React.FC<Form2Props> = ({ onContinue, onBack }) => {
       <div className="w-full lg:w-7/12 bg-white flex flex-col p-8 lg:p-16 lg:mx-20">
         <div className="flex flex-col items-start">
           <Button
-            className="bg-gray-300 hover:bg-slate-300 mb-2 w-8 h-8 p-3"
+            className="bg-gray-300 hover:bg-slate-300 mb-2 w-4 h-4 p-3"
             onClick={onBack}
           >
             <ArrowBackIosNewRoundedIcon />
@@ -43,7 +43,7 @@ const Form2: React.FC<Form2Props> = ({ onContinue, onBack }) => {
                   key={option.value}
                   className="flex items-center justify-between w-full lg:w-3/5 space-x-2 border p-4 rounded-lg"
                 >
-                  <Label htmlFor={option.value} className={option.color}>
+                  <Label htmlFor={option.value} className="text-blue">
                     {option.label}
                   </Label>
                   <RadioGroupItem value={option.value} id={option.value} />
