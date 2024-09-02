@@ -11,7 +11,7 @@ const Main: React.FC<MainProps> = ({ newItem, setNewItem, addItem }) => {
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Section */}
       <MainLeft />
-      <div className="w-full lg:w-7/12 bg-white flex flex-col justify-center items-center lg:p-12">
+      <div className="w-full lg:w-7/12 bg-white flex my-5 flex-col justify-center items-center lg:p-12">
         <div className="flex flex-col items-center">
           <h3 className="text-lg lg:text-xl max-w-xs mb-6 lg:max-w-sm text-blue font-semibold">
             Unlock Best <span className="font-bold">Business Loan</span> Offers

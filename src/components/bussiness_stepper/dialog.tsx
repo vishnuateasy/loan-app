@@ -46,7 +46,7 @@ const VerifyMobileDialog: React.FC<diaProps> = ({ open, onClose }) =>{
       </DialogContent>
       <DialogActions style={{ justifyContent: 'center', flexDirection: 'column' }}>
         <Button variant="contained" color="primary" fullWidth>
-          Verify & Login
+          Verify 
         </Button>
         <Box display="flex" alignItems="center" justifyContent="center" mt={2}>
           <WhatsAppIcon color="success" />

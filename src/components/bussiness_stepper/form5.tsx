@@ -41,7 +41,7 @@ const Form5: React.FC<Form5Props> = ({ onBack }) =>{
     <div className="w-full lg:w-7/12 bg-white flex flex-col p-8 lg:p-16 lg:mx-20">
       <div className="flex flex-col items-start">
         <Button
-          className="bg-gray-300 hover:bg-slate-300 mb-2 w-8 h-8 p-3"
+          className="bg-gray-300 hover:bg-slate-300 mb-2 w-4 h-4 p-3"
           onClick={onBack}
         >
           <ArrowBackIosNewRoundedIcon />
