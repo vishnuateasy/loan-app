@@ -18,7 +18,7 @@ const HomeLoanMain = () => {
       ) : (
         <>
           <HomeLeft />
-          <div className="w-full lg:w-7/12 bg-white flex flex-col  justify-center items-center lg:p-12">
+          <div className="w-full lg:w-7/12 my-5 bg-white flex flex-col  justify-center items-center lg:p-12">
             <div className="flex flex-col items-center">
               <h3 className="text-lg lg:text-xl max-w-xs mb-6 mr-16 lg:max-w-sm text-blue font-semibold">
                 Unlock Best <span className="font-bold">Home Loan</span> Offers
