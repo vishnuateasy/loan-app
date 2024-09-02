@@ -71,10 +71,12 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
             One step away to Get Best Offers
           </h3>
         </div>
-    
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-4">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="w-full space-y-4"
+          >
             {/* Gender Field */}
             <FormField
               control={form.control}
@@ -87,31 +89,29 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
                       value={field.value || ""}
                       onChange={(event) => field.onChange(event.target.value)}
                       aria-labelledby="gender-radio-group"
-                      
                     >
-                        <div className="flex ">
-
-                      <div className="flex items-center">
-                        <Radio
-                          value="Male"
-                          checked={field.value === "Male"}
-                          onChange={(event) =>
-                            field.onChange(event.target.value)
-                          }
-                        />
-                        <MUIFormLabel className="ml-2">Male</MUIFormLabel>
-                      </div>
-                      <div className="flex items-center">
-                        <Radio
-                          value="Female"
-                          checked={field.value === "Female"}
-                          onChange={(event) =>
-                            field.onChange(event.target.value)
-                          }
-                        />
-                        <MUIFormLabel className="ml-2">Female</MUIFormLabel>
-                      </div>
+                      <div className="flex ">
+                        <div className="flex items-center">
+                          <Radio
+                            value="Male"
+                            checked={field.value === "Male"}
+                            onChange={(event) =>
+                              field.onChange(event.target.value)
+                            }
+                          />
+                          <MUIFormLabel className="ml-2">Male</MUIFormLabel>
                         </div>
+                        <div className="flex items-center">
+                          <Radio
+                            value="Female"
+                            checked={field.value === "Female"}
+                            onChange={(event) =>
+                              field.onChange(event.target.value)
+                            }
+                          />
+                          <MUIFormLabel className="ml-2">Female</MUIFormLabel>
+                        </div>
+                      </div>
                     </RadioGroup>
                   </MUIFormControl>
                   <FormDescription>Select your gender.</FormDescription>
@@ -128,7 +128,11 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Full Name" {...field} className="w-full h-10 text-sm" />
+                    <Input
+                      placeholder="Full Name"
+                      {...field}
+                      className="w-full h-10 text-sm"
+                    />
                   </FormControl>
                   <FormDescription>Enter your full name.</FormDescription>
                   <FormMessage />
@@ -142,7 +146,11 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="Email" {...field} className="w-full h-10 text-sm" />
+                    <Input
+                      placeholder="Email"
+                      {...field}
+                      className="w-full h-10 text-sm"
+                    />
                   </FormControl>
                   <FormDescription>Enter your email address.</FormDescription>
                   <FormMessage />
@@ -156,7 +164,11 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
                 <FormItem>
                   <FormLabel>Date of Birth</FormLabel>
                   <FormControl>
-                    <Input type="date" {...field} className="w-full h-10 text-sm" />
+                    <Input
+                      type="date"
+                      {...field}
+                      className="w-full h-10 text-sm"
+                    />
                   </FormControl>
                   <FormDescription>Select your date of birth.</FormDescription>
                   <FormMessage />
@@ -170,7 +182,11 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
                 <FormItem>
                   <FormLabel>Pin Code</FormLabel>
                   <FormControl>
-                    <Input placeholder="Pin Code" {...field} className="w-full h-10 text-sm" />
+                    <Input
+                      placeholder="Pin Code"
+                      {...field}
+                      className="w-full h-10 text-sm"
+                    />
                   </FormControl>
                   <FormDescription>Enter your pin code.</FormDescription>
                   <FormMessage />
@@ -184,7 +200,11 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
                 <FormItem>
                   <FormLabel>PAN</FormLabel>
                   <FormControl>
-                    <Input placeholder="PAN" {...field} className="w-full h-10 text-sm" />
+                    <Input
+                      placeholder="PAN"
+                      {...field}
+                      className="w-full h-10 text-sm"
+                    />
                   </FormControl>
                   <FormDescription>Enter your PAN number.</FormDescription>
                   <FormMessage />
@@ -193,12 +213,14 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
             />
 
             {/* Submit Button */}
-            <Button type="submit" className="bg-blue-700 text-white hover:bg-blue-800 w-full h-10 mt-4">
+            <Button
+              type="submit"
+              className="bg-blue-700 text-white hover:bg-blue-800 w-full h-10 mt-4"
+            >
               Unlock best offers
             </Button>
           </form>
         </Form>
-         
       </div>
     </div>
   );
