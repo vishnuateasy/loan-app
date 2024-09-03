@@ -62,7 +62,7 @@ const Hform6: React.FC<Hform6Props> = ({ onBack }) => {
       <div className="flex-1 bg-white p-6 lg:p-10 mx-auto max-w-md lg:max-w-xl flex flex-col items-center">
         <div className="flex items-center w-full mb-4">
           <Button
-            className="bg-gray-300 hover:bg-slate-300 w-4 h-4 p-2"
+            className="bg-gray-300 hover:bg-slate-300  w-4 h-4 p-3"
             onClick={onBack}
           >
             <ArrowBackIosNewRoundedIcon />
